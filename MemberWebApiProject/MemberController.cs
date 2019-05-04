@@ -10,6 +10,8 @@ namespace MemberWebApiProject
 {
     public class MemberController : ApiController
     {
+        //created the instance of the database
+
         MemberDataClassesDataContext db = new MemberDataClassesDataContext();
 
         public IEnumerable<tblMember>Get()
@@ -17,6 +19,7 @@ namespace MemberWebApiProject
             return db.tblMembers.ToList().AsEnumerable();
         }
 
+        //get action method
         public HttpResponseMessage Get(int id)
         {
             var memberDetail = (from a in db.tblMembers where a.MemberID == id select a).FirstOrDefault();
