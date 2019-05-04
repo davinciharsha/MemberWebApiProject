@@ -30,7 +30,7 @@ namespace MemberWebApiProject
             }
             else
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid code or member not found");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid code or member not found..");
             }
         }
         
